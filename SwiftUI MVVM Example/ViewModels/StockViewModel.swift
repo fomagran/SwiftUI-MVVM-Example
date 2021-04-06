@@ -20,7 +20,7 @@ struct StockViewModel {
     }
     
     var price:String {
-        return String(format: "$.2f", self.stock.price)
+        return String(format: "%.2f", self.stock.price)
     }
     
     var change:String {
