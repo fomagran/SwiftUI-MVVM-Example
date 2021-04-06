@@ -13,6 +13,8 @@
 		04E5118F261BFF7F00A4797C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E5118E261BFF7F00A4797C /* Preview Assets.xcassets */; };
 		04E51199261BFFB100A4797C /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E51198261BFFB100A4797C /* WebService.swift */; };
 		04E5119E261C011500A4797C /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E5119D261C011500A4797C /* Stock.swift */; };
+		04E511A3261C032900A4797C /* StockListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E511A2261C032900A4797C /* StockListViewModel.swift */; };
+		04E511A7261C037E00A4797C /* StockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E511A6261C037E00A4797C /* StockViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		04E51190261BFF7F00A4797C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E51198261BFFB100A4797C /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		04E5119D261C011500A4797C /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		04E511A2261C032900A4797C /* StockListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewModel.swift; sourceTree = "<group>"; };
+		04E511A6261C037E00A4797C /* StockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		04E51186261BFF7E00A4797C /* SwiftUI MVVM Example */ = {
 			isa = PBXGroup;
 			children = (
+				04E511A1261C030000A4797C /* ViewModels */,
 				04E5119C261C010800A4797C /* Models */,
 				04E51197261BFF9E00A4797C /* Services */,
 				04E51187261BFF7E00A4797C /* SwiftUI_MVVM_ExampleApp.swift */,
@@ -89,6 +94,15 @@
 				04E5119D261C011500A4797C /* Stock.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		04E511A1261C030000A4797C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				04E511A2261C032900A4797C /* StockListViewModel.swift */,
+				04E511A6261C037E00A4797C /* StockViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +177,9 @@
 				04E51199261BFFB100A4797C /* WebService.swift in Sources */,
 				04E5118A261BFF7E00A4797C /* ContentView.swift in Sources */,
 				04E5119E261C011500A4797C /* Stock.swift in Sources */,
+				04E511A7261C037E00A4797C /* StockViewModel.swift in Sources */,
 				04E51188261BFF7E00A4797C /* SwiftUI_MVVM_ExampleApp.swift in Sources */,
+				04E511A3261C032900A4797C /* StockListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

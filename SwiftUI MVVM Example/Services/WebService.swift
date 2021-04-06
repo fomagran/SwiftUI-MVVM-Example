@@ -22,5 +22,5 @@ class WebService {
             stocks == nil ? completion(nil) : completion(stocks)
         }.resume()
     }
-    //
+    
 }
