@@ -22,6 +22,8 @@ struct ContentView: View {
     }
     
     var body: some View {
+        let filteredStocks = self.stockListViewModel.searchTerm.isEmpty ? self.stockListViewModel.stocks : self.stockListViewModel.stocks.filter{ $0.symbol.starts(with:self.stockListViewModel.searchTerm)}
+        
         NavigationView {
             ZStack(alignment:.leading) {
                 Color.black
@@ -34,7 +36,7 @@ struct ContentView: View {
                 
                 SearchView(searchTerm: self.$stockListViewModel.searchTerm)
                     .offset(y:-270)
-                StockListView(stocks: self.stockListViewModel.stocks).offset(y:100)
+                StockListView(stocks: filteredStocks).offset(y:100)
                     .navigationBarTitle("Stocks")
             }.edgesIgnoringSafeArea(.bottom)
 
