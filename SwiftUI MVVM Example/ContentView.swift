@@ -42,7 +42,11 @@ struct ContentView: View {
                                 onDragBegin: { value in
                                     self.stockListViewModel.dragOffset = value.translation
                                 },onDrageEnd: { value in
-                                    print("end")
+                                    if value.translation.height < 0 {
+                                        self.stockListViewModel.dragOffset = CGSize(width: 0, height: 140)
+                                    }else {
+                                        self.stockListViewModel.dragOffset = CGSize(width: 0, height: 680)
+                                    }
                                 })
                     .animation(.spring())
                     .offset(y:self.stockListViewModel.dragOffset.height)
