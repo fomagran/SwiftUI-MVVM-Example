@@ -38,10 +38,16 @@ struct ContentView: View {
                     .offset(y:-260)
                 StockListView(stocks: filteredStocks).offset(y:140)
                     .navigationBarTitle("Stocks")
-                NewsArticleView(newsArticles: self.stockListViewModel.news)
-                    .offset(y:500)
+                NewsArticleView(newsArticles: self.stockListViewModel.news,
+                                onDragBegin: { value in
+                                    self.stockListViewModel.dragOffset = value.translation
+                                },onDrageEnd: { value in
+                                    print("end")
+                                })
+                    .animation(.spring())
+                    .offset(y:self.stockListViewModel.dragOffset.height)
             }.edgesIgnoringSafeArea(.bottom)
-
+            
         }
     }
 }

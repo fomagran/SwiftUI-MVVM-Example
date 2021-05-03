@@ -72,12 +72,12 @@
 		04E51186261BFF7E00A4797C /* SwiftUI MVVM Example */ = {
 			isa = PBXGroup;
 			children = (
+				04E51189261BFF7E00A4797C /* ContentView.swift */,
 				04E511A9261C09E300A4797C /* Views */,
 				04E511A1261C030000A4797C /* ViewModels */,
 				04E5119C261C010800A4797C /* Models */,
 				04E51197261BFF9E00A4797C /* Services */,
 				04E51187261BFF7E00A4797C /* SwiftUI_MVVM_ExampleApp.swift */,
-				04E51189261BFF7E00A4797C /* ContentView.swift */,
 				04E5118B261BFF7F00A4797C /* Assets.xcassets */,
 				04E51190261BFF7F00A4797C /* Info.plist */,
 				04E5118D261BFF7F00A4797C /* Preview Content */,

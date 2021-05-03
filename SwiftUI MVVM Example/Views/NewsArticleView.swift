@@ -11,6 +11,9 @@ import URLImage
 struct NewsArticleView: View {
     
     let newsArticles:[NewsArticleViewModel]
+    let onDragBegin:(DragGesture.Value) -> Void
+    let onDrageEnd:(DragGesture.Value) -> Void
+    
     
     var body: some View {
         let screensize = UIScreen.main.bounds.size
@@ -21,6 +24,10 @@ struct NewsArticleView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(2)
+                    .gesture(DragGesture()
+                                .onChanged(self.onDragBegin)
+                                .onEnded(self.onDrageEnd)
+                    )
                 
                 Text("From 🍍News")
                     .foregroundColor(Color.gray)
@@ -65,6 +72,6 @@ struct NewsArticleView_Previews: PreviewProvider {
     static var previews: some View {
         let article = Article(title: "News Title", imageURL: "https://firebasestorage.googleapis.com/v0/b/moapt-15a9c.appspot.com/o/kidImage%2F%3CUIImage:0x6000010b7060%20anonymous%20%7B100,%20100%7D%3E?alt=media&token=bdcb322c-063c-4d73-a7b3-ac25a72c62e7", publication:  "Fomagran's Journal")
         
-        return NewsArticleView(newsArticles:[NewsArticleViewModel(article: article)])
+        return NewsArticleView(newsArticles:[NewsArticleViewModel(article: article)],onDragBegin: {_ in },onDrageEnd:{_ in})
     }
 }
