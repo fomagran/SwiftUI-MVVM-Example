@@ -10,7 +10,7 @@ import Foundation
 class WebService {
     
     func getTopNews(completion:@escaping(([Article]?) -> Void)) {
-        guard let url = URL(string: "https://island-bramble.glitch.me/stocks") else { return }
+        guard let url = URL(string: "https://island-bramble.glitch.me/top-news") else { return }
         
         URLSession.shared.dataTask(with: url) { data,response,error in
             guard let data = data,error == nil else {

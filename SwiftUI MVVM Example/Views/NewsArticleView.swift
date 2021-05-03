@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct NewsArticleView: View {
     
@@ -44,6 +45,10 @@ struct NewsArticleView: View {
                                         .fontWeight(.bold)
                                 }
                                 Spacer()
+                                
+                                URLImage(url: URL(string: article.imageURL)!) { image in
+                                    image.resizable()
+                                }.frame(width: 100, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
                             }
                         }
                     }.frame(maxWidth:.infinity)

@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0418CA3A263F878800F5BCC3 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418CA39263F878800F5BCC3 /* Article.swift */; };
 		0418CA3C263F88D400F5BCC3 /* NewsArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418CA3B263F88D400F5BCC3 /* NewsArticleViewModel.swift */; };
 		0418CA3E263F89CB00F5BCC3 /* NewsArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418CA3D263F89CB00F5BCC3 /* NewsArticleView.swift */; };
+		0418CA41263F937B00F5BCC3 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0418CA40263F937B00F5BCC3 /* URLImage */; };
 		04E51188261BFF7E00A4797C /* SwiftUI_MVVM_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E51187261BFF7E00A4797C /* SwiftUI_MVVM_ExampleApp.swift */; };
 		04E5118A261BFF7E00A4797C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E51189261BFF7E00A4797C /* ContentView.swift */; };
 		04E5118C261BFF7F00A4797C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E5118B261BFF7F00A4797C /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0418CA41263F937B00F5BCC3 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,9 @@
 			dependencies = (
 			);
 			name = "SwiftUI MVVM Example";
+			packageProductDependencies = (
+				0418CA40263F937B00F5BCC3 /* URLImage */,
+			);
 			productName = "SwiftUI MVVM Example";
 			productReference = 04E51184261BFF7E00A4797C /* SwiftUI MVVM Example.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +176,9 @@
 				Base,
 			);
 			mainGroup = 04E5117B261BFF7E00A4797C;
+			packageReferences = (
+				0418CA3F263F937B00F5BCC3 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 04E51185261BFF7E00A4797C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -396,6 +404,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0418CA3F263F937B00F5BCC3 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0418CA40263F937B00F5BCC3 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0418CA3F263F937B00F5BCC3 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04E5117C261BFF7E00A4797C /* Project object */;
 }
