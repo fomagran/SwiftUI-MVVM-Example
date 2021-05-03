@@ -10,4 +10,4 @@ URLSession으로 데이터 받아오기
 MVVM으로 데이터 화면에 띄우기   
 SwiftUI 제스쳐달기
 
-<img src="https://user-images.githubusercontent.com/47676921/116837858-0b580b00-ac07-11eb-97a6-914a7b233635.gif"  width="250" height="400">
+<img src="https://user-images.githubusercontent.com/47676921/116837858-0b580b00-ac07-11eb-97a6-914a7b233635.gif"  width="200" height="400">
