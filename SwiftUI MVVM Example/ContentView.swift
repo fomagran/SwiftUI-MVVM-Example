@@ -32,12 +32,14 @@ struct ContentView: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color.gray)
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-                    .offset(y:-330)
+                    .offset(y:-320)
                 
                 SearchView(searchTerm: self.$stockListViewModel.searchTerm)
-                    .offset(y:-270)
-                StockListView(stocks: filteredStocks).offset(y:100)
+                    .offset(y:-260)
+                StockListView(stocks: filteredStocks).offset(y:140)
                     .navigationBarTitle("Stocks")
+                NewsArticleView(newsArticles: self.stockListViewModel.news)
+                    .offset(y:140)
             }.edgesIgnoringSafeArea(.bottom)
 
         }
